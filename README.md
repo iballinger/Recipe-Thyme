@@ -4,30 +4,30 @@
     
    <h5>Christopher Hayes</h5>                             
       <a href="https://github.com/devoperations2" target="_blank">
-      <img src="https://img.shields.io/badge/-Portfolio:CristopherHayes-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:devoperations2-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/christopher-hayes-59057b164/" target="_blank">
-      <img src="https://img.shields.io/badge/-linkedin.com/in/christopherhayes-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:chrishayes0130@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-chrishayes0130@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
 
    <h5>Dani Diaz</h5>                             
       <a href="https://github.com/dani-diaz" target="_blank">
-      <img src="https://img.shields.io/badge/-Portfolio:danidiaz-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:danidiaz-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/danidiaz8/" target="_blank">
-      <img src="https://img.shields.io/badge/-linkedin.com/in/danidiaz8-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:daniela.diaz0808@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-daniela.diaz0808@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
 
    <h5>Ilerdon Ballinger</h5>                             
       <a href="https://github.com/iballinger/" target="_blank">
-      <img src="https://img.shields.io/badge/-Portfolio:iballinger.github.io-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:iballinger-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/ilerdon-ballinger/" target="_blank">
-      <img src="https://img.shields.io/badge/-linkedin.com/in/ilerdonballinger-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:ilerdonballinger@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-ilerdonballinger@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
