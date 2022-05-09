@@ -4,33 +4,33 @@
     
    <h5>Christopher Hayes</h5>                             
       <a href="https://github.com/devoperations2" target="_blank">
-      <img src="https://img.shields.io/badge/-Github:devoperations2-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:%20github.com/devoperations2-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/christopher-hayes-59057b164/" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn:%20linkedin.com/in/christopher&#8211;hayes&#8211;59057b164-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:chrishayes0130@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/-chrishayes0130@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+      <img src="https://img.shields.io/badge/-GMail:%20chrishayes0130@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
 
    <h5>Dani Diaz</h5>                             
       <a href="https://github.com/dani-diaz" target="_blank">
-      <img src="https://img.shields.io/badge/-Github:danidiaz-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:%20github.com/danidiaz-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/danidiaz8/" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn:%20linkedin.com/in/danidiaz8-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:daniela.diaz0808@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/-daniela.diaz0808@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+      <img src="https://img.shields.io/badge/-GMail:%20daniela.diaz0808@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
 
    <h5>Ilerdon Ballinger</h5>                             
       <a href="https://github.com/iballinger/" target="_blank">
-      <img src="https://img.shields.io/badge/-Github:iballinger-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Github:%20github.com/iballinger-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="https://www.linkedin.com/in/ilerdon-ballinger/" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&``logo=Linkedin&logoColor=white">
+      <img src="https://img.shields.io/badge/-LinkedIn:%20linkedin.com/in/ilerdon&#8211;ballinger-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="mailto:ilerdonballinger@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/-ilerdonballinger@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+      <img src="https://img.shields.io/badge/-GMail:%20ilerdonballinger@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
 </div>
 
@@ -91,7 +91,7 @@
 
 ### Upcoming Features
 
-Further features can be found on the <a href="https://trello.com/b/gU6Trd9E/project-2" target="_blank">Trello board</a>.
+Further features can be found on the <a href="https://trello.com/b/AN0V72I8/recipe-thyme" target="_blank">Trello board</a>.
 
 - [ ] Icebox 1
 - [ ] Icebox 2
