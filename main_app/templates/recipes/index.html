@@ -5,7 +5,7 @@
 
 {% for recipe in recipes %}
 <div class="card">
-    <a href="{% url 'detail' recipe.id %}">
+    
         <div class="card-content">
             <span class="card-title">{{ recipe.title }}</span>
             <p>Prep time: {{ recipe.prep_time }}</p>
@@ -14,7 +14,7 @@
             <p>Category: {{ recipe.category }}</p>
             <p>Cuisine: {{ recipe.cuisine }}</p>
         </div>
-    </a>
+    
 </div>
 {% endfor %}
 
