@@ -11,7 +11,7 @@ from .models import Recipe
 @login_required
 def recipes(request):
   recipes = Recipe.objects.all()
-  return render(request, 'recipes.html', {'recipes': recipes})
+  return render(request, 'recipes/index.html', {'recipes': recipes})
 
 class RecipeCreate(CreateView):
   model = Recipe
