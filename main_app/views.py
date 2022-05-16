@@ -1,15 +1,21 @@
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Recipe
 
 
 @login_required
 def recipes(request):
   recipes = Recipe.objects.all()
   return render(request, 'recipes.html', {'recipes': recipes})
+
+class RecipeCreate(CreateView):
+  model = Recipe
+  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
 
 
 # Create your views here.
