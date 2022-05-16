@@ -7,9 +7,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 @login_required
-def all_recipes(request):
+def recipes(request):
   recipes = Recipe.objects.all()
-  return render(request, 'all_recipes.html', {'recipes': recipes})
+  return render(request, 'recipes.html', {'recipes': recipes})
 
 
 # Create your views here.
