@@ -17,6 +17,9 @@ class RecipeCreate(CreateView):
   model = Recipe
   fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
 
+  def form_valid(self, form): 
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 # Create your views here.
 def home(request):
@@ -38,3 +41,13 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+
+def recipe_detail(request, pk):
+  recipe = Recipe.objects.get(id=pk)
+  return render(request, 'recipes/detail.html', {'recipe': recipe}) 
+
+
+def recipe_index(request):
+  recipes = Recipe.objects.filter(user=request.user)
+  return render(request, 'recipes/index.html', {'recipes': recipes})
