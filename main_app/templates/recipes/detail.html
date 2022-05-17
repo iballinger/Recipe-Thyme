@@ -32,7 +32,7 @@
   </div>
   <div class="col s6">
     {% for ingredient in recipe.ingredient_set.all %}    
-      <p><a href="{% url 'delete_ingredient' ingredient.id %}">[X]</a> {{ingredient.portion}} {{ingredient.ingredient}}</p>
+      <p><a href="{% url 'delete_ingredient' ingredient.id %}"><span class="secondary-content right"> [Delete]</span></a> {{ingredient.portion}} {{ingredient.ingredient}}</p>
     {% empty %}
       <h5>No Ingredients</h5>
     {% endfor %}
