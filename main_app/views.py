@@ -5,7 +5,10 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Recipe
+from .models import Recipe, Photo
+import os
+import uuid
+import boto3
 
 
 @login_required
@@ -51,3 +54,19 @@ def recipe_detail(request, pk):
 def recipe_index(request):
   recipes = Recipe.objects.filter(user=request.user)
   return render(request, 'recipes/index.html', {'recipes': recipes})
+
+@login_required
+def add_photo(request, recipe_id):
+  photo_file = request.FILES.get('photo-file', None)
+  if photo_file:
+    s3 = boto3.client('s3')
+    key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+    try:
+      bucket = os.environ['S3_BUCKET']
+      s3.upload_fileobj(photo_file, bucket, key)
+      url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+      Photo.objects.create(url=url, recipe_id=recipe_id)
+    except Exception as e:
+      print('An error occurred uploading file to S3')
+      print(e)
+  return redirect('detail', recipe_id=recipe_id)
