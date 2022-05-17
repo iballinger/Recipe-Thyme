@@ -6,7 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Recipe, Photo
+from .models import Recipe, Photo, Ingredient
 import os
 import uuid
 import boto3
@@ -57,16 +57,46 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-
+@login_required
 def recipe_detail(request, pk):  
   recipe = Recipe.objects.get(id=pk)
+  id_list = recipe.ingredients.all().values_list('id')
+  ingredient_recipe_doesnt_have = Ingredient.objects.exclude(id__in=id_list)
   review_form = ReviewForm()
-  return render(request, 'recipes/detail.html', {'recipe': recipe, 'review_form': review_form}) 
+  return render(request, 'recipes/detail.html', {'recipe': recipe, 'review_form': review_form, 'ingredients': ingredient_recipe_doesnt_have}) 
 
 
 def recipe_index(request):
   recipes = Recipe.objects.filter(user=request.user)
   return render(request, 'recipes/index.html', {'recipes': recipes})
+
+@login_required
+def assoc_ingredient(request, recipe_id, ingredient_id):
+  Recipe.objects.get(id=recipe_id).ingredients.add(ingredient_id)
+  return redirect('detail', pk=recipe_id)
+
+@login_required
+def unassoc_ingredient(request, recipe_id, ingredient_id):
+  Recipe.objects.get(id=recipe_id).ingredients.remove(ingredient_id)
+  return redirect('detail', pk=recipe_id)
+
+class IngredientList(LoginRequiredMixin, ListView):
+  model = Ingredient
+
+class IngredientDetail(LoginRequiredMixin, DetailView):
+  model = Ingredient
+
+class IngredientCreate(LoginRequiredMixin, CreateView):
+  model = Ingredient
+  fields = '__all__'
+
+class IngredientUpdate(LoginRequiredMixin, UpdateView):
+  model = Ingredient
+  fields = ['ingredient', 'portion']
+
+class IngredientDelete(LoginRequiredMixin, DeleteView):
+  model = Ingredient
+  success_url = '/ingredients/'
 
 @login_required
 def add_photo(request, recipe_id):
