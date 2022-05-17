@@ -20,6 +20,8 @@
         </ul>
         <ul class="right">
           {% if user.is_authenticated %}
+            <li><a href="{% url 'ingredients_create' %}">Add an Ingredient</a></li>
+            <li><a href="{% url 'ingredients_index' %}">View All Ingredients</a></li>
             <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
             <li><a href="{% url 'recipes' %}">View All Recipes</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
