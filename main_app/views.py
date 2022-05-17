@@ -69,4 +69,4 @@ def add_photo(request, recipe_id):
     except Exception as e:
       print('An error occurred uploading file to S3')
       print(e)
-  return redirect('detail', recipe_id=recipe_id)
+  return redirect('detail', pk=recipe_id)
