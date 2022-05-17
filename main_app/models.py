@@ -6,15 +6,6 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
-class Ingredient(models.Model):
-    portion = models.CharField(max_length=25)
-    ingredient = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.ingredient
-
-    def get_absolute_url(self):
-        return reverse('ingredients_detail', kwargs={'pk': self.id})
 
 class Recipe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -25,7 +16,6 @@ class Recipe(models.Model):
     prep_time = models.CharField(max_length=25)
     cook_time = models.CharField(max_length=25)
     difficulty = models.IntegerField()
-    ingredients = models.ManyToManyField(Ingredient)
 
     def __str__(self):
          return self.title
@@ -44,6 +34,17 @@ class Photo(models.Model):
 
     def __str__(self):
         return f"Photo for recipe_id: {self.recipe_id} @{self.url}"
+
+class Ingredient(models.Model):
+    portion = models.CharField(max_length=25)
+    ingredient = models.CharField(max_length=50)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.ingredient
+
+    def get_absolute_url(self):
+        return reverse('ingredients_detail', kwargs={'pk': self.id})
 
 class Review(models.Model):
     score = models.IntegerField(max_length=1)
