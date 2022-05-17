@@ -6,7 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Recipe, Photo, Ingredient
+from .models import Recipe, Photo, Ingredient, Review
 import os
 import uuid
 import boto3
@@ -97,6 +97,10 @@ def add_review(request, recipe_id):
     new_review.recipe_id = recipe_id
     new_review.save()
   return redirect('detail', pk=recipe_id)
+
+class ReviewDelete(LoginRequiredMixin, DeleteView):
+  model = Review
+  success_url = '/recipes/'
 
 def add_ingredient(request, recipe_id):
   form = IngredientForm(request.POST)
