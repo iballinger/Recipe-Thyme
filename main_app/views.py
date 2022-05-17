@@ -10,6 +10,9 @@ from .models import Recipe, Photo
 import os
 import uuid
 import boto3
+from .forms import ReviewForm
+
+
 
 
 @login_required
@@ -55,9 +58,10 @@ def signup(request):
   return render(request, 'registration/signup.html', context)
 
 
-def recipe_detail(request, pk):
+def recipe_detail(request, pk):  
   recipe = Recipe.objects.get(id=pk)
-  return render(request, 'recipes/detail.html', {'recipe': recipe}) 
+  review_form = ReviewForm()
+  return render(request, 'recipes/detail.html', {'recipe': recipe, 'review_form': review_form}) 
 
 
 def recipe_index(request):
@@ -80,4 +84,11 @@ def add_photo(request, recipe_id):
       print(e)
   return redirect('detail', pk=recipe_id)
 
-
+def add_review(request, recipe_id):
+ 
+  form = ReviewForm(request.POST)
+  if form.is_valid():
+    new_review = form.save(commit=False)
+    new_review.recipe_id = recipe_id
+    new_review.save()
+  return redirect('detail', pk=recipe_id)

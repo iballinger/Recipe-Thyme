@@ -39,7 +39,10 @@ class Review(models.Model):
     score = models.IntegerField(max_length=1)
     content = models.CharField(max_length=500)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    
 
     def __str__(self):
-        return f"{self.score}: {self.content}"
+        return f"{self.score}: {self.content}" 
+    class Meta: 
+        ordering = ['-score']
     
