@@ -12,7 +12,11 @@
           <p>Prep Time: {{ recipe.prep_time }}</p>
           <p>Cook Time: {{ recipe.cook_time }}</p>
           <p>Difficulty: {{ recipe.difficulty }}</p>
-        </div>      
+        </div>  
+        <div class="card-action">
+          <a href="{% url 'recipes_update' recipe.id %}">Edit</a>
+          <a href="{% url 'recipes_delete' recipe.id %}">Delete</a>
+          </div>  
       </div> 
       {% for photo in recipe.photo_set.all %}
         <img class="responsive-img card-panel" src="{{photo.url}}" alt="recipe photo">

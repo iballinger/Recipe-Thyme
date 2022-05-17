@@ -1,3 +1,4 @@
+from nturl2path import url2pathname
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, redirect
@@ -23,6 +24,14 @@ class RecipeCreate(CreateView):
   def form_valid(self, form): 
     form.instance.user = self.request.user
     return super().form_valid(form)
+
+class RecipeUpdate(LoginRequiredMixin, UpdateView):
+  model = Recipe
+  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
+
+class RecipeDelete(LoginRequiredMixin, DeleteView):
+  model = Recipe
+  success_url = '/recipes/'
 
 # Create your views here.
 def home(request):
@@ -70,3 +79,5 @@ def add_photo(request, recipe_id):
       print('An error occurred uploading file to S3')
       print(e)
   return redirect('detail', pk=recipe_id)
+
+
