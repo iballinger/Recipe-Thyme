@@ -22,6 +22,12 @@
         </ul>
         <ul class="right">
           {% if user.is_authenticated %}
+          <li>
+            <form class="searchback" method="POST" action="{% url 'search_recipes' %}">
+              {% csrf_token %}
+              <input class="d-flex-search" autocomplete="off" type="search" placeholder="Search Recipes" name="searched">
+            </form>
+          </li>
           <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
           <li><a href="{% url 'recipes' %}">View All Recipes</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>

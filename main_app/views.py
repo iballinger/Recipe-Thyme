@@ -110,9 +110,13 @@ def add_ingredient(request, recipe_id):
     new_ingredient.save()
   return redirect('detail', pk=recipe_id)
 
-# def delete_ingredient(request, recipe_id, ingredient_id):
-#   Ingredient.objects.filter(ingredient_id=ingredient_id).delete()
-#   return redirect('detail', pk=recipe_id)
 class IngredientDelete(LoginRequiredMixin, DeleteView):
   model = Ingredient
   success_url = '/recipes/'
+
+@login_required
+def search_recipes(request):
+  if request.method == "POST":
+    searched = request.POST['searched']
+    recipes = Recipe.objects.filter(title__icontains=searched)
+    return render(request, 'recipes/search_recipes.html', {'searched': searched, 'recipes':recipes })
