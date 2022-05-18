@@ -95,6 +95,7 @@ def add_review(request, recipe_id):
   if form.is_valid():
     new_review = form.save(commit=False)
     new_review.recipe_id = recipe_id
+    new_review.user = request.user
     new_review.save()
   return redirect('detail', pk=recipe_id)
 
