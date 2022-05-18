@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-size: 1200px 1000px;
+   
   }
     
   main {
@@ -24,19 +25,26 @@ body {
   
   input.btn {
     background-color: rgb(5, 146, 50);
+    background: linear-gradient(to bottom, #127292 1%, #4eae6e 100%);
   }
 
   #search {
     width: 200px !important;
     display: inline;
-
+    
 
   }
   
   #search-form {
     display: inline;
+    
   }
 
   nav {
     background-color: rgb(5, 146, 50);
+  }
+
+  #homelogo {
+    max-height: 64px;
+    border-radius: 50%;
   }
