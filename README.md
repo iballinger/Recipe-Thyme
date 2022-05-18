@@ -1,6 +1,6 @@
 <div align="center">
    <h1>🍳 Recipe Thyme 🍳</h1>
-   <h3><a href="">Use the Site!</a></h3>
+   <h3><a href="http://recipe-thyme.herokuapp.com/">Use the Site!</a></h3>
     
    <h5>Christopher Hayes</h5>                             
       <a href="https://github.com/devoperations2" target="_blank">
@@ -79,17 +79,16 @@
 <details open>
 <summary>How to Use</summary>
 <ol>
-<li>Step 1.</li>
-<li>Step 2.</li>
-<li>Step 3.</li>
-<li>Step 4.</li>
-<li>Step 5.</li>
+<li>Step 1. Sign Up using the link on the home page.</li>
+<li>Step 2. Try browsing to all recipes, and leave a review on any that you try!</li>
+<li>Step 3. Add your own recipes by using the "Add Recipe" button.</li>
+<li>Step 4. Once you've created a recipe, you can then add ingredients or your own reviews to it!</li>
 </ol>
 </details>
 
 <details open>   
 <summary>Deployed Link (Heroku)</summary>
-<p><a href=""></a></p>
+<p><a href="http://recipe-thyme.herokuapp.com/">http://recipe-thyme.herokuapp.com/</a></p>
 </details>
 
 ## :fast_forward: Next Steps   
