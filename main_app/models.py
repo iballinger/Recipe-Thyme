@@ -49,7 +49,8 @@ class Ingredient(models.Model):
         return reverse('ingredients_detail', kwargs={'pk': self.id})
 
 class Review(models.Model):
-    score = models.IntegerField(max_length=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    score = models.IntegerField()
     content = models.CharField(max_length=500)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     
