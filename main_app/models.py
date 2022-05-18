@@ -10,12 +10,14 @@ from django.contrib.auth.models import User
 class Recipe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    instructions = models.TextField()
     cuisine = models.CharField(max_length=25)
     category = models.CharField(max_length=25)
+    allergens = models.CharField(max_length=25)
+    servings = models.IntegerField()
     prep_time = models.CharField(max_length=25)
     cook_time = models.CharField(max_length=25)
     difficulty = models.IntegerField()
+    instructions = models.TextField()
 
     def __str__(self):
          return self.title

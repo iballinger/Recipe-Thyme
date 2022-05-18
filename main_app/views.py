@@ -22,7 +22,7 @@ def recipes(request):
 
 class RecipeCreate(CreateView):
   model = Recipe
-  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
+  fields = ['title', 'cuisine', 'category', 'allergens', 'servings', 'prep_time', 'cook_time', 'difficulty', 'instructions']
 
   def form_valid(self, form): 
     form.instance.user = self.request.user
@@ -30,7 +30,7 @@ class RecipeCreate(CreateView):
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
   model = Recipe
-  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
+  fields = ['title', 'cuisine', 'category', 'allergens', 'servings', 'prep_time', 'cook_time', 'difficulty', 'instructions']
 
 class RecipeDelete(LoginRequiredMixin, DeleteView):
   model = Recipe
