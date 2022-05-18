@@ -15,19 +15,22 @@
   <header class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <ul>
-          <li><a href="{% url 'home' %}" class="left brand-logo">Recipe Thyme</a></li>
+        <ul class="left">
+          <li>
+            <a href="{% url 'home' %}" class="left brand-logo">Recipe Thyme</a>
+          </li>
         </ul>
         <ul class="right">
           {% if user.is_authenticated %}
-            <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
-            <li><a href="{% url 'recipes' %}">View All Recipes</a></li>
-            <li><a href="{% url 'logout' %}">Log Out</a></li>
+          <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
+          <li><a href="{% url 'recipes' %}">View All Recipes</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-            <li><a href="{% url 'login' %}">Log In</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'login' %}">Log In</a></li>
           {% endif %}
         </ul>
+        <form id="search-form" class="right" action="{% url 'recipes' 'anything' %}"><input id="search" name="filter" type="text"></form> 
       </div>
     </nav>
   </header>

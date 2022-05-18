@@ -6,12 +6,13 @@
     <div class="card">
       <div class="card-content">
         <span class="card-title">{{ recipe.title }}</span>
-        <p>Instruction: {{ recipe.instructions }}</p>
         <p>Cuisine: {{ recipe.cuisine }}</p>
         <p>Category: {{ recipe.category }}</p>
+        <p>Allergens: {{ recipe.allergens }}</p>
         <p>Prep Time: {{ recipe.prep_time }}</p>
         <p>Cook Time: {{ recipe.cook_time }}</p>
         <p>Difficulty: {{ recipe.difficulty }}</p>
+        <p>Instruction: {{ recipe.instructions }}</p>
       </div>  
       <div class="card-action">
         <a href="{% url 'recipes_update' recipe.id %}">Edit</a>

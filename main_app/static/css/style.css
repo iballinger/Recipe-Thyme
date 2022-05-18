@@ -24,4 +24,14 @@ body {
   input.btn {
     background-color: rgb(5, 146, 50);
   }
+
+  #search {
+    width: 200px !important;
+    display: inline;
+    
+
+  }
   
+  #search-form {
+    display: inline;
+  }

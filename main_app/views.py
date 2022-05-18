@@ -16,7 +16,7 @@ from .forms import ReviewForm, IngredientForm
 
 
 @login_required
-def recipes(request):
+def recipes(request, filter=''):
   recipes = Recipe.objects.all()
   return render(request, 'recipes/index.html', {'recipes': recipes})
 
@@ -69,7 +69,7 @@ def recipe_detail(request, pk):
   }) 
 
 
-def recipe_index(request):
+def recipe_index(request, filter=''):
   recipes = Recipe.objects.filter(user=request.user)
   return render(request, 'recipes/index.html', {'recipes': recipes})
 
