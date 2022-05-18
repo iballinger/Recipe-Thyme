@@ -102,6 +102,10 @@ class ReviewDelete(LoginRequiredMixin, DeleteView):
   model = Review
   success_url = '/recipes/'
 
+# class ReviewEdit(LoginRequiredMixin, UpdateView):
+#   model = Review
+#   success_url = '/recipes/'
+
 def add_ingredient(request, recipe_id):
   form = IngredientForm(request.POST)
   if form.is_valid():
