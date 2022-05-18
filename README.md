@@ -42,8 +42,13 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Entity Resource Diagram</h3> | <img src="https://i.imgur.com/fOh399q.png" width="700"/> |
-| <h3 align="center">Wireframe</h3> | <img src="" width="700"/> |
+| <h3 align="center">Entity Resource Diagram</h3> | <img src="https://i.imgur.com/gUjzXMu.png" width="700"/> |
+| <h3 align="center">Home Page</h3> | <img src="https://i.imgur.com/nmVwIve.png" width="700"/> |
+| <h3 align="center">Sign Up</h3> | <img src="https://i.imgur.com/gxR81ei.png" width="700"/> |
+| <h3 align="center">All Recipes</h3> | <img src="https://i.imgur.com/TiXxMQ6.png" width="700"/> |
+| <h3 align="center">Add Recipe</h3> | <img src="https://i.imgur.com/6C0r9jV.png" width="700"/> |
+| <h3 align="center">Recipe Detail</h3> | <img src="https://i.imgur.com/9zXIi5v.png" width="700"/> |
+   | <h3 align="center">Navbar Detail</h3> | <img src="https://i.imgur.com/inxvEgV.png" width="700"/> |
 </details>
 
 <details>
