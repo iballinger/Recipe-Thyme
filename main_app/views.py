@@ -122,5 +122,9 @@ class IngredientDelete(LoginRequiredMixin, DeleteView):
 def search_recipes(request):
   if request.method == "POST":
     searched = request.POST['searched']
-    recipes = Recipe.objects.filter(title__icontains=searched)
+    choice = request.POST['choice']
+    field = f'{choice}__icontains'
+    kwargs = {field: searched}
+    recipes = Recipe.objects.filter(**kwargs)
+    # recipes = Recipe.objects.filter(title__icontains=searched)
     return render(request, 'recipes/search_recipes.html', {'searched': searched, 'recipes':recipes })

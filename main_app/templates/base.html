@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Recipe Thyme</title>
 </head>
 <body>
@@ -26,6 +27,12 @@
             <form class="searchback" method="POST" action="{% url 'search_recipes' %}">
               {% csrf_token %}
               <input class="d-flex-search" autocomplete="off" type="search" placeholder="Search Recipes" name="searched">
+              <select name="choice" id="id_choice">
+                <option value="title">Title</option>
+                <option value="category">Category</option>
+                <option value="cuisine">Cuisine</option>
+              </select>
+              <button type="submit" style="display:none"></button>
             </form>
           </li>
           <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
@@ -46,5 +53,13 @@
   <footer class="page-footer">
     <div class="right">All Rights Reserved, &copy; 2022 Recipe Thyme &nbsp;</div>
   </footer>
+  
+<script>
+  
+  const selectEl = document.getElementById('id_choice');
+  M.FormSelect.init(selectEl);
+  
+</script>
+
 </body>
 </html>
