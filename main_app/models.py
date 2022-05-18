@@ -53,6 +53,8 @@ class Review(models.Model):
     score = models.IntegerField()
     content = models.CharField(max_length=500)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'pk': self.recipe.id})
     
 
     def __str__(self):

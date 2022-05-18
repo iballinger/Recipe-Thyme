@@ -56,6 +56,7 @@
       <p>{{review.score}}: {{review.content}}
         {% if review.user == user %}
         <a href="{% url 'delete_review' review.id %}"><span class="secondary-content right"> [Delete]</span></a>
+        <a href="{% url 'edit_review' review.id %}"><span class="secondary-content right"> [Edit]</span></a>
         {% endif %}
       </p>
     {% empty %}
