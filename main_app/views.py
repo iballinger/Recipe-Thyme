@@ -16,13 +16,13 @@ from .forms import ReviewForm, IngredientForm
 
 
 @login_required
-def recipes(request, filter=''):
+def recipes(request):
   recipes = Recipe.objects.all()
   return render(request, 'recipes/index.html', {'recipes': recipes})
 
 class RecipeCreate(CreateView):
   model = Recipe
-  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
+  fields = ['title', 'cuisine', 'category', 'allergens', 'servings', 'prep_time', 'cook_time', 'difficulty', 'instructions']
 
   def form_valid(self, form): 
     form.instance.user = self.request.user
@@ -30,7 +30,7 @@ class RecipeCreate(CreateView):
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
   model = Recipe
-  fields = ['title', 'instructions', 'cuisine', 'category', 'prep_time', 'cook_time', 'difficulty']
+  fields = ['title', 'cuisine', 'category', 'allergens', 'servings', 'prep_time', 'cook_time', 'difficulty', 'instructions']
 
 class RecipeDelete(LoginRequiredMixin, DeleteView):
   model = Recipe
@@ -69,7 +69,7 @@ def recipe_detail(request, pk):
   }) 
 
 
-def recipe_index(request, filter=''):
+def recipe_index(request):
   recipes = Recipe.objects.filter(user=request.user)
   return render(request, 'recipes/index.html', {'recipes': recipes})
 

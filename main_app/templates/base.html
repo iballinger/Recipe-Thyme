@@ -14,10 +14,10 @@
 <body>
   <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
+      <div class="-wrapper">
         <ul class="left">
           <li>
-            <a href="{% url 'home' %}" class="left brand-logo">Recipe Thyme</a>
+            <a href="{% url 'home' %}" class="left brand-logo"></a>
           </li>
         </ul>
         <ul class="right">
@@ -30,7 +30,6 @@
           <li><a href="{% url 'login' %}">Log In</a></li>
           {% endif %}
         </ul>
-        <form id="search-form" class="right" action="{% url 'recipes' 'anything' %}"><input id="search" name="filter" type="text"></form> 
       </div>
     </nav>
   </header>

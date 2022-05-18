@@ -19,6 +19,7 @@ body {
   
   div.nav-wrapper {
     background-color: rgb(5, 146, 50);
+    width: fit-content;
   }
   
   input.btn {
@@ -28,10 +29,14 @@ body {
   #search {
     width: 200px !important;
     display: inline;
-    
+
 
   }
   
   #search-form {
     display: inline;
+  }
+
+  nav {
+    background-color: rgb(5, 146, 50);
   }
