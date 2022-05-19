@@ -4,47 +4,46 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-size: 1200px 1000px;
-   
-  }
-    
-  main {
-    flex: 1 0 auto;
-      
-  }
-    
-  footer.page-footer {
-    padding-top: 0;
-    text-align: right;
-    background-color: rgb(5, 146, 50);
-  }
+}
   
-  div.nav-wrapper {
-    background-color: rgb(5, 146, 50);
-    width: fit-content;
-  }
-  
-  input.btn {
-    background-color: rgb(5, 146, 50);
-    background: linear-gradient(to bottom, #127292 1%, #4eae6e 100%);
-  }
-
-  #search {
-    width: 200px !important;
-    display: inline;
+main {
+  flex: 1 0 auto;
     
-
-  }
+}
   
-  #search-form {
-    display: inline;
-    
-  }
+footer.page-footer {
+  padding-top: 0;
+  text-align: right;
+  background-color: rgb(5, 146, 50);
+}
 
-  nav {
-    background-color: rgb(5, 146, 50);
-  }
+div.nav-wrapper {
+  background-color: rgb(5, 146, 50);
+  width: fit-content;
+}
 
-  #homelogo {
-    max-height: 64px;
-    border-radius: 50%;
-  }
+input.btn {
+  background-color: rgb(5, 146, 50);
+  background: linear-gradient(to bottom, #127292 1%, #4eae6e 100%);
+}
+
+#search {
+  width: 200px !important;
+  display: inline;
+  
+
+}
+
+#search-form {
+  display: inline;
+  
+}
+
+nav {
+  background-color: rgb(5, 146, 50);
+}
+
+#homelogo {
+  max-height: 64px;
+  border-radius: 50%;
+}
