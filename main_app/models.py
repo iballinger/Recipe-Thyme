@@ -61,4 +61,6 @@ class Review(models.Model):
         return f"{self.score}: {self.content}" 
     class Meta: 
         ordering = ['-score']
+
+        
     
