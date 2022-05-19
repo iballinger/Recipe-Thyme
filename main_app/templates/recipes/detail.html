@@ -13,7 +13,7 @@
         <p>Prep Time: {{ recipe.prep_time }}</p>
         <p>Cook Time: {{ recipe.cook_time }}</p>
         <p>Difficulty: {{ recipe.difficulty }}</p>
-        <p>Instruction: {{ recipe.instructions|linebreaks }}</p>
+        <p>Instructions: {{ recipe.instructions|linebreaks }}</p>
       </div>  
       <div class="card-action">
         <a href="{% url 'recipes_update' recipe.id %}">Edit</a>
