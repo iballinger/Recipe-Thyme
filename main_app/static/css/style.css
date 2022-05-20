@@ -1,11 +1,12 @@
 body {
+    color: rgb(5, 146, 50);
     display: flex;
     background-repeat: no-repeat;
     min-height: 100vh;
     flex-direction: column;
     background-size: 1200px 1000px;
 }
-  
+
 main {
   flex: 1 0 auto;
     
@@ -24,7 +25,7 @@ div.nav-wrapper {
 
 input.btn {
   background-color: rgb(5, 146, 50);
-  background: linear-gradient(to bottom, #127292 1%, #4eae6e 100%);
+  background: linear-gradient(to bottom, rgb(11, 188, 188) 1%, rgb(5, 146, 50) 100%);
 }
 
 #search {
@@ -46,4 +47,9 @@ nav {
 #homelogo {
   max-height: 64px;
   border-radius: 50%;
+}
+
+#carousel {
+  max-width: 750px;
+  margin: 0 auto;
 }
