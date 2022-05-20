@@ -56,10 +56,10 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Landing Page</h3> | <img src="" width="700"/> |
-| <h3 align="center">Recipe Index</h3> | <img src="" width="700"/> |
-| <h3 align="center">Recipe Page</h3> | <img src="" width="700"/> |
-| <h3 align="center">Ingredient Page</h3> | <img src="" width="700"/> |
+| <h3 align="center">Landing Page</h3> | <img src="https://i.imgur.com/MZ0pyDv.png" width="700"/> |
+| <h3 align="center">Recipe Index</h3> | <img src="https://i.imgur.com/I1uim5A.png" width="700"/> |
+| <h3 align="center">Recipe Page</h3> | <img src="https://i.imgur.com/XZfylLu.png" width="700"/> |
+| <h3 align="center">Sign Up Page</h3> | <img src="https://i.imgur.com/YIeziWx.png" width="700"/> |
 </details>
 
 ## :computer: Technologies Used
