@@ -25,7 +25,7 @@
         <ul class="right">
           {% if user.is_authenticated %}
           <li>
-            <form class="searchback" method="POST" action="{% url 'search_recipes' %}" style="display:flex">
+            <form class="searchback" method="POST" action="{% url 'search_recipes' %}" style="display:flex" >
               {% csrf_token %}
               <input class="d-flex-search" autocomplete="off" type="search" placeholder="Search Recipes" name="searched">
               <select name="choice" id="id_choice">
